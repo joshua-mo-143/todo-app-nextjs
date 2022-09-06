@@ -62,11 +62,6 @@ export default function Home() {
             <br />
             <br />
           </h1>
-          {loading ? (
-            <a href="#" className={styles.card}>
-              <img src="/loader.gif" />
-            </a>
-          ) : (
             <form className={styles.cardForm} onSubmit={addTodo}>
               <input
                 className={styles.cardInput}
@@ -76,7 +71,7 @@ export default function Home() {
                 placeholder="Enter your exciting TODO item!"
               />
             </form>
-          )}
+          
 
           {data.map((item) => (
             <a
