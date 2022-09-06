@@ -4,7 +4,6 @@ export default async (req, res) => {
     }
     let todo = encodeURI(req.query.todo);
   
-    const token = "85d405e4ff7a49b6ab20de9188a03d1c";
     const url =
       `https://${process.env.REDIS_URL}/lrem/todo/1/" + todo + "?_token=" + ${process.env.REDIS_TOKEN}`;
   

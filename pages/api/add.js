@@ -3,8 +3,7 @@ export default async (req, res) => {
       return res.status(400).send("todo parameter required.");
     }
     let todo = encodeURI(req.query.todo);
-  
-    const token = "RE85d405e4ff7a49b6ab20de9188a03d1c";
+
     const url =
       `https://${process.env.REDIS_URL}/lpush/todo/" + todo + "?_token=" + ${process.env.REDIS_TOKEN}`;
   
