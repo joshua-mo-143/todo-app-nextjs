@@ -78,6 +78,7 @@ export default function Home() {
               href="#"
               onClick={() => removeTodo(item)}
               className={styles.card}
+              key={item}
             >
               <p>{item}</p>
             </a>

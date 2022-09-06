@@ -1,5 +1,5 @@
 export default async (req, res) => {
-    const url = `https://${process.env.REDIS_URL}/lrange/todo/0/100?_token= + ${process.env.REDIS_TOKEN}`
+    const url = `https://${process.env.REDIS_URL}/lrange/todo/0/100?_token=${process.env.REDIS_TOKEN}`
   
     return fetch(url)
       .then((r) => r.json())

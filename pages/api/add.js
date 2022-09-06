@@ -5,7 +5,7 @@ export default async (req, res) => {
     let todo = encodeURI(req.query.todo);
 
     const url =
-      `https://${process.env.REDIS_URL}/lpush/todo/" + todo + "?_token=" + ${process.env.REDIS_TOKEN}`;
+      `https://${process.env.REDIS_URL}/lpush/todo/${todo}?_token=${process.env.REDIS_TOKEN}`;
   
     return fetch(url)
       .then((r) => r.json())
