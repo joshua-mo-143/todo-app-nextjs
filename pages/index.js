@@ -94,7 +94,6 @@ export default function Home() {
         >
           Powered by{" "}
           <span className={styles.logo}>
-            <Image src="/logo.png" alt="Upstash Logo" width={87} height={25} />
           </span>
         </a>
       </footer>
